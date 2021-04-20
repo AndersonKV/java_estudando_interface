@@ -13,6 +13,12 @@ public class CarRental {
 
     }
 
+    public CarRental(Date start, Date finish, Vehicle vehicle) {
+        this.start = start;
+        this.finish = finish;
+        this.vehicle = vehicle;
+    }
+
     public Date getStart() {
         return start;
     }
@@ -35,6 +41,14 @@ public class CarRental {
 
     public void setVehicle(Vehicle vehicle) {
         this.vehicle = vehicle;
+    }
+
+    public Invoice getInvoice() {
+        return invoice;
+    }
+
+    public void setInvoice(Invoice invoice) {
+        this.invoice = invoice;
     }
 }
 
