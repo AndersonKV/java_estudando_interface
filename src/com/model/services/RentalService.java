@@ -8,16 +8,16 @@ public class RentalService {
     private final Double pricePerDay;
     private final Double pricePerHour;
 
-    private final BrazilTaxService taxService;
+    private final TaxService taxService;
 
-    public RentalService(Double pricePerDay, Double pricePerHour, BrazilTaxService taxService) {
+    public RentalService(Double pricePerDay, Double pricePerHour, TaxService taxService) {
         super();
         this.pricePerDay = pricePerDay;
         this.pricePerHour = pricePerHour;
         this.taxService = taxService;
     }
 
-    public void processInvoice(@NotNull CarRental carRental) {
+    public void processInvoice(CarRental carRental) {
         long t1 = carRental.getStart().getTime();
         long t2 = carRental.getFinish().getTime();
         double hours = (double) (t2 - t1) / 1000 / 60 / 60;
